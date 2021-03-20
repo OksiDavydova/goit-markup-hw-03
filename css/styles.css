@@ -343,12 +343,11 @@ address {
 }
 
 .list-products .card {
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
 }
 .flex-products .products-title {
   margin-bottom: 4px;
