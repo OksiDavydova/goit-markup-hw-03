@@ -402,6 +402,8 @@ address {
 
 /*--футер--*/
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -431,8 +433,6 @@ address {
 
 .footer-container {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .footer-address {
