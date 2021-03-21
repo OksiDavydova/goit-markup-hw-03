@@ -64,10 +64,6 @@ address {
   padding-bottom: 94px;
 }
 
-.holder {
-  padding-bottom: 0px;
-}
-
 .team,
 .kinds-work,
 .flex-products {
@@ -75,45 +71,6 @@ address {
   flex-wrap: wrap;
 }
 
-.header {
-  border-bottom: 1px solid #ececec;
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.main-nav {
-  display: flex;
-  margin-left: 93px;
-}
-
-.header .list {
-  display: flex;
-}
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-.contacts {
-  margin-left: auto;
-}
-
-/*--стилизация логотипа--*/
-.logo-title {
-  display: block;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  color: var(--text-title-color);
-}
-
-.logo-title .logo-title-part {
-  color: var(--accent-color);
-}
-/*--списки--*/
 .list {
   margin-top: 0;
   margin-bottom: 0;
@@ -122,41 +79,12 @@ address {
   list-style: none;
 }
 
-.flex-products .list-products {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-
-  background-color: var(--white-color);
-}
-
-.flex-products .list-products:nth-child(3n) {
-  margin-right: 0px;
-}
-.flex-products .list-products:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-}
-
-.kinds-work .kinds-work-item {
-  flex-basis: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.kinds-work .kinds-work-item:nth-child(3n) {
-  margin-right: 0px;
-}
-.kinds-work .kinds-work-item:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-}
-
-/*елементы списков*/
+/*------------елементы списков--------------*/
 .link,
 .link-products {
   text-decoration: none;
 }
-
-/*--ссылки--*/
+/*-------------------ссылки-----------------*/
 .link {
   font-size: 14px;
   line-height: 1.14;
@@ -170,25 +98,60 @@ address {
   color: var(--accent-color);
 }
 
-.contacts .link {
+/* ---------------- шапка сайта --------------*/
+.contacts .link,
+.site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.site-nav .link {
+  color: var(--text-title-color);
+}
+
+.site-nav .current {
+  color: var(--accent-color);
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header .main-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header .list {
+  display: flex;
+  margin-left: auto;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts .contacts-item + .contacts-item {
   margin-left: 50px;
 }
 
-.site-nav .link {
+/*------------стилизация логотипа---------*/
+.logo-title {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
   color: var(--text-title-color);
 }
 
-.site-nav .current {
+.logo-title .logo-title-part {
   color: var(--accent-color);
 }
 
@@ -229,7 +192,7 @@ address {
   text-align: center;
 }
 
-/*--кнопка "Заказать услугу"--*/
+/*-------кнопка "Заказать услугу"------*/
 .button {
   margin: 0px;
   border-width: 0px;
@@ -268,6 +231,10 @@ address {
   margin-right: 8px;
 }
 
+.filter-list.filter-item:nth-child(5n) {
+  margin-right: 0px;
+}
+
 .filter-button {
   border: 0px solid #f5f4fa;
   font-family: inherit;
@@ -287,11 +254,13 @@ address {
   border: 0px transparent #2196f3;
 }
 
-.filter-list.filter-item:nth-child(5n) {
-  margin-right: 0px;
+/*----------- сeкция особенности-------------- */
+
+.holder {
+  padding-bottom: 0;
 }
 
-/*--елементы списков*/
+/*--елементы списков особенности и "portfolio"*/
 .list-item-title,
 .products-title {
   font-weight: 700;
@@ -306,6 +275,8 @@ address {
 }
 
 .products-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -325,11 +296,22 @@ address {
   margin-bottom: 0px;
 }
 
-.products-type {
+.flex-products .products-type {
+  margin-bottom: 0px;
+
   font-size: 16px;
   line-height: 1.87;
 }
 
+.list-products .card {
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+
+  padding: 20px 24px;
+}
+
+/* ----флекс на секцию особенности */
 .features {
   display: flex;
   justify-content: space-between;
@@ -345,25 +327,62 @@ address {
   margin-right: 0px;
 }
 
-.list-products .card {
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+/* ---флекс на секцию примеры наших работ */
+.flex-products .list-products {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
 
-  padding: 20px 24px;
-}
-.flex-products .products-title {
-  margin-bottom: 4px;
+  background-color: var(--white-color);
 }
 
-.flex-products .products-type {
+.flex-products .list-products:nth-child(3n) {
+  margin-right: 0px;
+}
+.flex-products .list-products:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
 
-/*--Наша команда--*/
+/* ------------- Чем мы занимаемся --------------- */
+.kinds-work .kinds-work-item {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.kinds-work .kinds-work-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.kinds-work .kinds-work-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+/*----------------Наша команда------------------*/
+
+.team-list .team {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team .team-item-number {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.team-number-position {
+  margin-bottom: 0;
+
+  color: var(--text-primery-color);
+}
+
 .team-list {
   background-color: #f5f4fa;
 }
+
 .team .team-item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
@@ -377,33 +396,16 @@ address {
   margin-right: 0px;
 }
 
-.team {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-}
-
-.team .team-item-number {
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.team-number-position {
-  color: var(--text-primery-color);
-  margin-bottom: 0;
-}
-
 .team .team-item-card {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/*--футер--*/
+/*------------------------футер-----------------*/
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
